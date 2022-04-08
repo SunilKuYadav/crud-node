@@ -1,5 +1,4 @@
 import express from "express";
-
 // import our local router files
 import routes from "./routes";
 
@@ -8,6 +7,7 @@ const app = express();
 
 // allow express to work with json
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // router
 app.use(routes);
