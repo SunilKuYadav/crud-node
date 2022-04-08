@@ -13,9 +13,9 @@ router.get("/product/list", Product.index);
 router.post("/product/create", Product.create);
 
 // update a product
-router.patch("/product/update/:id", Product.update);
+router.patch("/product/update", Product.update);
 
 // delete a product
-router.delete("/product/delete/:id", Product.delete);
+router.delete("/product/delete", Product.delete);
 
 export default router;
