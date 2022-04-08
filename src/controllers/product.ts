@@ -19,6 +19,7 @@ const productControllers = {
   create(req: any, res: any) {
     // increse id by 1
     id++;
+
     // get the body of request and organize product
     const product = {
       id,
@@ -26,6 +27,7 @@ const productControllers = {
       price: req.body.price,
     };
     products.push(product);
+
     res.status(200).json({
       status: "success",
       message: "Product created",
@@ -34,14 +36,15 @@ const productControllers = {
 
   // update the product
   update(req: any, res: any) {
-    const { id } = req.params;
+    const { id } = req.query;
     const { name, price } = req.body;
 
-    const product = products.find((item: any) => item.id === id);
+    const product = products.find((item: any) => item.id == id);
     if (product) {
       product.name = name;
       product.price = price;
     }
+
     res.status(200).json({
       status: "success",
       message: "Product updated",
@@ -50,11 +53,13 @@ const productControllers = {
 
   // delete the product
   delete(req: any, res: any) {
-    const { id } = req.params;
-    const product = products.find((item: any) => item.id === id);
+    const { id } = req.query;
+
+    const product = products.find((item: any) => item.id == id);
     if (product) {
-      product.splice(product.indexOf(product, 1));
+      products.splice(products.indexOf(product), 1);
     }
+
     res.status(200).json({
       status: "success",
       message: "Product deleted",
