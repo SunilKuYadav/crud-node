@@ -1,0 +1,24 @@
+{
+  "name": "crud-node",
+  "version": "1.0.0",
+  "description": "This is complete CRUD rest-api based on nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunilKuYadav/crud-node.git"
+  },
+  "keywords": [
+    "CRUD",
+    "NodeJS",
+    "REST-API"
+  ],
+  "author": "Sunil Kumar Yadav",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SunilKuYadav/crud-node/issues"
+  },
+  "homepage": "https://github.com/SunilKuYadav/crud-node#readme"
+}
